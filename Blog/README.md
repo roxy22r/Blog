@@ -1,6 +1,7 @@
 # Blog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+This Website only has a navbar and a auto carousel 
 
 ## Development server
 
