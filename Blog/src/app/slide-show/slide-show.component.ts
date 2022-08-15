@@ -35,6 +35,10 @@ export  class SlideShowComponent implements OnInit {
   imageSrc:"./assets/img/pic2.jpg",
   imageAlt:"t",
 },
+{
+  imageSrc:"./assets/img/pic3.jpg",
+  imageAlt:"Nature",
+}
 ]
  
   slides: string [] = ['./assets/img/pic1.jpg', './assets/img/pic2.jpg']
