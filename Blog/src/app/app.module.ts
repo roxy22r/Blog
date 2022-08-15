@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
     FooterComponent,
     SlideShowComponent,
     AboutMeComponent,
+    ContactsComponent,
   ],
   imports: [
     SlickCarouselModule,
