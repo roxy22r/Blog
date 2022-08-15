@@ -1,6 +1,7 @@
 /* The actual timeline (the vertical ruler) */
 .aboutMe{
 background-color: black;
+height: auto;
 }
 
 .timeline {

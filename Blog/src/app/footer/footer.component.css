@@ -1,8 +1,5 @@
-.footer{
-    color: white;
-    position:absolute;
-    width:100%;
-    height:auto;   /* Height of the footer */
-    background:black;
+#footer{
+    background-color: black;
+    clear:both;
 
 }
