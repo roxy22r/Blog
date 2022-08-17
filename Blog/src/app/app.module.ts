@@ -10,6 +10,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     SlideShowComponent,
     AboutMeComponent,
     ContactsComponent,
+    BlogComponent,
   ],
   imports: [
     SlickCarouselModule,
