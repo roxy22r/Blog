@@ -9,11 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AboutMeComponent } from './about-me/about-me.component';
-<<<<<<< Updated upstream
-=======
 import { ContactsComponent } from './contacts/contacts.component';
 import { BlogComponent } from './blog/blog.component';
->>>>>>> Stashed changes
 
 
 @NgModule({
@@ -24,11 +21,8 @@ import { BlogComponent } from './blog/blog.component';
     FooterComponent,
     SlideShowComponent,
     AboutMeComponent,
-<<<<<<< Updated upstream
-=======
     ContactsComponent,
     BlogComponent,
->>>>>>> Stashed changes
   ],
   imports: [
     SlickCarouselModule,
