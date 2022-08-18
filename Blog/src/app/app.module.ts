@@ -11,6 +11,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { BlogComponent } from './blog/blog.component';
+import { AddBlogContentComponent } from './add-blog-content/add-blog-content.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { BlogComponent } from './blog/blog.component';
     AboutMeComponent,
     ContactsComponent,
     BlogComponent,
+    AddBlogContentComponent,
   ],
   imports: [
     SlickCarouselModule,
