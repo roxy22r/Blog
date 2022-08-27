@@ -1,12 +1,16 @@
 <div class="mb-3" id="form">
-
-    <form action="/action_page.php" id="addBlogContentForm">
+    <h2>
+       NEW BLOG CONTENT
+    </h2>
+    <form action="/action_page.php" id="addBlogContentForm" >
         <label class="form-label">Blog Title:</label>
         <input type="text" class="form-control"/><br>
         <label class="form-label">Blog Content:</label>
         <textarea class="form-control"></textarea><br>
         <label class="form-label">Blog Picture:</label><br>
         <input type="file"   class="form-control"id="blogPic" name="filename"><br>
+        <div  id="addNewPargraph"></div>
+        <input  (click)="onClick()"  type="button" class="form-control" value="Add more"  ><br>
         <input type="submit"  class="form-control"><br>
     </form>
 </div>
