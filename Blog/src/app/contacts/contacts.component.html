@@ -2,15 +2,21 @@
 <h2>
     CONTACT US
 </h2>
-<div class="mb-3" id="form">
-    <label for="formGroupExampleInput" class="form-label">Surename</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Surename">
-    <label for="formGroupExampleInput2" class="form-label">Firstname </label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Firstname">
-    <label for="formGroupExampleInput" class="form-label">E-mail</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="E-mail">
-    <label for="formGroupExampleInput2" class="form-label">Message </label>
-    <textarea type="text" class="form-control" id="formGroupExampleInput2" placeholder="Message"></textarea><br>
-    <input type="submit"  class="form-control"><br>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
-  </div>
+    <div class="mb-3" id="form">
+        <label class="form-label">Surename</label>
+        <input formControlName="surename" type="text" class="form-control"  placeholder="Surename">
+        <span style="color: red;" *ngIf="contactForm.controls['surename'].invalid&&contactForm.controls['surename'].touched">Surename is required<br></span>
+        <label  class="form-label">Firstname </label>
+        <input formControlName="firstname" type="text" class="form-control"  placeholder="Firstname">
+        <span style="color: red;" *ngIf="contactForm.controls['firstname'].invalid&&contactForm.controls['firstname'].touched">Firstname is required<br></span>
+        <label  class="form-label">E-mail</label>
+        <input formControlName="email" type="text" class="form-control"  placeholder="E-mail">
+        <span style="color: red;" *ngIf="contactForm.controls['email'].invalid&&contactForm.controls['email'].touched">E-mail is incorrect<br></span>
+        <label  class="form-label">Message </label>
+        <textarea formControlName="message" type="text" class="form-control"  placeholder="Message"></textarea><br>
+        <span></span>
+        <input type="submit"  class="form-control"><br>
+    </div>
+</form>
