@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { from, fromEventPattern } from 'rxjs';
 
 @Component({
@@ -9,6 +10,17 @@ import { from, fromEventPattern } from 'rxjs';
 export class AddBlogContentComponent implements OnInit {
   public loading = new Array(4);
   
+
+  blogContentForm = new FormGroup({
+    title:new FormControl('',[Validators.required]),
+    content:new FormControl('',[Validators.required]),
+  })
+
+  onSubmit(): void{
+    if (this.blogContentForm.valid){
+      return;
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
@@ -30,4 +42,6 @@ export class AddBlogContentComponent implements OnInit {
     "<br><input type='file'   class='form-control'id='blogPic' name='filename'><br>";
     Mform.appendChild(node);
 }
+
+
 }
