@@ -12,6 +12,10 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { BlogComponent } from './blog/blog.component';
 import { AddBlogContentComponent } from './add-blog-content/add-blog-content.component';
+import { ListAllBlogTopicsComponent } from './list-all-blog-topics/list-all-blog-topics.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StateDragDropComponent } from './state-drag-drop/state-drag-drop.component';
 
 
 @NgModule({
@@ -25,11 +29,18 @@ import { AddBlogContentComponent } from './add-blog-content/add-blog-content.com
     ContactsComponent,
     BlogComponent,
     AddBlogContentComponent,
+    ListAllBlogTopicsComponent,
+    StateDragDropComponent,
   ],
   imports: [
     SlickCarouselModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    
+    
       
   ],
   providers: [],

@@ -1,12 +1,18 @@
 <div class="mb-3" id="form">
-
-    <form action="/action_page.php" id="addBlogContentForm">
+    <h2>
+       NEW BLOG CONTENT
+    </h2>
+    <form [formGroup]="blogContentForm" (ngSubmit)="onSubmit()">
         <label class="form-label">Blog Title:</label>
-        <input type="text" class="form-control"/><br>
+        <input formControlName="title" type="text" class="form-control"/><br>
+        <span style="color: red;"  *ngIf="blogContentForm.controls['title'].invalid&&blogContentForm.controls['title'].touched">Title required<br></span>
         <label class="form-label">Blog Content:</label>
-        <textarea class="form-control"></textarea><br>
+        <textarea formControlName="content"class="form-control"></textarea><br>
+        <span style="color: red;"  *ngIf="blogContentForm.controls['content'].invalid&&blogContentForm.controls['content'].touched">Content required<br></span>
         <label class="form-label">Blog Picture:</label><br>
         <input type="file"   class="form-control"id="blogPic" name="filename"><br>
+        <div  id="addNewPargraph"></div>
+        <input  (click)="onClick()"  type="button" class="form-control" value="Add more"  ><br>
         <input type="submit"  class="form-control"><br>
     </form>
 </div>
