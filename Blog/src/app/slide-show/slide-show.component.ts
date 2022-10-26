@@ -24,7 +24,7 @@ export  class SlideShowComponent implements OnInit {
     }
   }
   @Input() autoSlide = false
-  @Input() slideInterval=3000;
+  @Input() slideInterval=500;
 
 @Input()images: carouselImage[] = [
 {

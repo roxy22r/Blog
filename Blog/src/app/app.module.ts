@@ -16,6 +16,7 @@ import { ListAllBlogTopicsComponent } from './list-all-blog-topics/list-all-blog
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StateDragDropComponent } from './state-drag-drop/state-drag-drop.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { StateDragDropComponent } from './state-drag-drop/state-drag-drop.compon
     AddBlogContentComponent,
     ListAllBlogTopicsComponent,
     StateDragDropComponent,
+    HomeComponent,
   ],
   imports: [
     SlickCarouselModule,
