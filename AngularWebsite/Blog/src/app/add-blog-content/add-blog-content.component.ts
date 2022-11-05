@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { from, fromEventPattern } from 'rxjs';
+import axios from 'axios';
+import { title } from 'process';
 
 @Component({
   selector: 'app-add-blog-content',
@@ -18,6 +20,8 @@ export class AddBlogContentComponent implements OnInit {
 
   onSubmit(): void{
     if (this.blogContentForm.valid){
+       const result =  this.send();
+ 
       return;
     }
   }
@@ -26,6 +30,29 @@ export class AddBlogContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ async send(){
+  try {
+    
+
+    const response = await axios.get('/blog/add',{
+      params: {
+        title: this.blogContentForm.get('title')?.value,
+        content: this.blogContentForm.get('content')?.value
+      }
+    });
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+  }
+  async getBlogItems(){
+    try {
+      const response = await axios.get('/blog/getAllRecords')
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
   
   onClick(): void {
     const node = document.createElement("div");
