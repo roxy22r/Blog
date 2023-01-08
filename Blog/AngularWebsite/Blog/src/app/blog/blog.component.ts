@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit} from '@angular/core';
+import { BlogItem, BlogService } from './blog.service';
 
 @Component({
   selector: 'app-blog',
@@ -8,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class BlogComponent implements OnInit {
+  blogItems:BlogItem[] = []
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(@Inject(BlogService) private service:BlogService) { }
+
+   async ngOnInit(): Promise<void>{
+    this.blogItems = await this.service.getAll();
   }
 
 }

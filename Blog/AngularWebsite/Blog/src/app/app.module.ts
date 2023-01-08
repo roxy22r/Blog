@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,7 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StateDragDropComponent } from './state-drag-drop/state-drag-drop.component';
 import { HomeComponent } from './home/home.component';
-import {MatLegacyDialogModule as MatDialogModule} from '@angular/material/legacy-dialog';
+import { BlogService } from './blog/blog.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactService } from './contacts/contact.service';
 
 
 @NgModule({
@@ -42,11 +43,10 @@ import {MatLegacyDialogModule as MatDialogModule} from '@angular/material/legacy
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    HttpClientModule
     
-      
   ],
-  providers: [],
+  providers: [BlogService,ContactService],
   bootstrap: [AppComponent]
 })
 

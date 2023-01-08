@@ -1,20 +1,13 @@
 <body>
-    <app-navbar></app-navbar>   
     <div class="blog">
         <h1>BLOG</h1>
-        <div class="Blog-sidebar">
+        <div  *ngFor="let blogItem of blogItems" class="Blog-sidebar">
+        <img alt="item">
+    
+        <a href="">
+            {{blogItem.title}}
+        </a> 
+    
         </div>
-        <div class="blogMain">
-            <div class="blogPic">
-                <img alt="blogpic">
-            </div>
-            <div class="blogConentText">
-                This is a blog content .....<br>
-                -.........
-            </div>
-            <div>
-            <button>click ME</button>
-            </div>
     </div>
-</div>
 </body>
