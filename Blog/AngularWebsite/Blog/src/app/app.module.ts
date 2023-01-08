@@ -17,7 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StateDragDropComponent } from './state-drag-drop/state-drag-drop.component';
 import { HomeComponent } from './home/home.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatLegacyDialogModule as MatDialogModule} from '@angular/material/legacy-dialog';
 
 
 @NgModule({
