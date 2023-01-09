@@ -12,16 +12,11 @@ export interface BlogItem{
     providedIn:'root'
   })
 export class BlogService  {
-    blogItems:BlogItem[] = [{id: '1', title: 'Learn Python', content: 'someeeeText asdfa  s'},
-    {id: '2', title: 'Sky Python', content: 'someeeeText asdfa  s'},
-    {id: '3', title: 'fire Python', content: 'someeeeText asdfa  s'},
-    {id: '4', title: 'deep Python', content: 'someeeeText asdfa  s'}]
-  rootUrl:string = "";
+  rootUrl:string = "http://localhost:5000/";
   constructor(public http: HttpClient){}
 
    async getAll():Promise<BlogItem[]>{
-    return    this.blogItems;
-    // return lastValueFrom(this.http.request<BlogItem[]>('GET',this.rootUrl));
+    return lastValueFrom(this.http.request<BlogItem[]>('GET',this.rootUrl+"Blog/contents"));
     }
  
 
