@@ -1,3 +1,7 @@
-<button mat-raised-button color="primary" [routerLink]="['/blog']">Back</button>
-<h1>{{ item.title }}</h1>
-<p>{{ item.content }}</p>
+<button class="back" mat-raised-button color="primary" [routerLink]="['/blog']">
+  Back
+</button>
+<div class="post">
+  <h1>{{ item.title }}</h1>
+  <p>{{ item.content }}</p>
+</div>
