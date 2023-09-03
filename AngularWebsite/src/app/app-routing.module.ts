@@ -6,18 +6,19 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 const routes: Routes = [
-  {path:'contact', component: ContactsComponent},
-  {path:'',component:HomeComponent},
-  {path:'blog',component:BlogComponent},
-  {path:'blog/add', component:AddBlogContentComponent},
-  {path:'aboutMe',component:AboutMeComponent},
+  { path: 'contact', component: ContactsComponent },
+  { path: '', component: HomeComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'post', component: BlogPostComponent },
+  { path: 'blog/add', component: AddBlogContentComponent },
+  { path: 'aboutMe', component: AboutMeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {  }
- 
+export class AppRoutingModule {}

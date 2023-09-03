@@ -17,9 +17,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StateDragDropComponent } from './state-drag-drop/state-drag-drop.component';
 import { HomeComponent } from './home/home.component';
 import { BlogService } from './blog/blog.service';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './contacts/contact.service';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { MatCardModule } from '@angular/material/card';
     ListAllBlogTopicsComponent,
     StateDragDropComponent,
     HomeComponent,
+    BlogPostComponent,
   ],
   imports: [
     SlickCarouselModule,
@@ -45,6 +48,7 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     HttpClientModule,
     MatCardModule,
+    MatButtonModule,
   ],
   providers: [BlogService, ContactService],
   bootstrap: [AppComponent],
