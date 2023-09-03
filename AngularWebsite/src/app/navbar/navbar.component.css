@@ -9,10 +9,15 @@
 }
 .navbar{
     border-style: solid;
-    border-color: grey;
+    border-color: #00b38f;
     border-left: none;
     border-right: none;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 10px;
+}
+
+.navbar a{
+    font-size: large;
+    font-weight: 500;
+    color: black;
 }
