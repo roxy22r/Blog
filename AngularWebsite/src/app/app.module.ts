@@ -19,7 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { BlogService } from './blog/blog.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './contacts/contact.service';
-
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -43,11 +43,10 @@ import { ContactService } from './contacts/contact.service';
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    MatCardModule,
   ],
-  providers: [BlogService,ContactService],
-  bootstrap: [AppComponent]
+  providers: [BlogService, ContactService],
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}

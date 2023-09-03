@@ -2,3 +2,8 @@
     margin-top: 100px;
     text-align: center;
 }
+.blog_Posts{
+    display: inline-flex;
+    margin: 10px ;
+}
+

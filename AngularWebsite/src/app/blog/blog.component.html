@@ -1,13 +1,17 @@
 <body>
-    <div class="blog">
-        <h1>BLOG</h1>
-        <div  *ngFor="let blogItem of blogItems" class="Blog-sidebar">
-        <img alt="item">
-    
-        <a href="">
-            {{blogItem.title}}
-        </a> 
-    
-        </div>
+  <div class="blog">
+    <h1>BLOG</h1>
+    <div *ngFor="let blogItem of blogItems" class="blog_Posts">
+      <mat-card>
+        <mat-card-header>
+          <a href="">
+            {{ blogItem.title }}
+          </a>
+        </mat-card-header>
+        <mat-card-content>
+          {{ blogItem.content }}
+        </mat-card-content>
+      </mat-card>
     </div>
+  </div>
 </body>
